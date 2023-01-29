@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="jumbotron crtev">
+   <h3>Create a Post for the event:{{ event.title }} <h3>
+    <h4> <a class="btn btn-info" href="{% url 'post_app:createpost' pk=event.pk %}">Create</a> </h4>
+</div>
+<div class="container psts">
+   <button type="button " class="btn btn-info">
+     Total Post for this event <span class="badge badge-light">{{ posts.count }}</span>
+   </button>
+   <ol>
+     {%  for post in posts %}
+      <li>
+       <div class="jumbotron pst">
+          <div class="post1">
+              {{ post.count }}
+              <h5> {{ post.post }} </h5><br>
+              <a href="{% url 'calendar_app:eventinfo' pk=event.id %}"><button class="btn btn-info" name="button">Jump to Event</button></a>
+          </div>
+          <div class="post2">
+              <h3>Posted At</h3>
+              <h5> {{ post.post_at }} </h5>
+              <div class="pp2">
+                 <a class="btn btn-info" href="{% url 'post_app:updatepost' pk=post.id %}">Update</a>
+                 <a class="btn btn-info" href="{% url 'post_app:deletepost' pk=post.id %}">Delete</a>
+              </div>
+           </div>
+        </div>
+      </li>
+     {% endfor %}
+   </ol>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+  <div class="dm">
+    <div class="jumbotron detail">
+      <ul>
+        <li>Event Name   :   {{ event.title }}</li><br>
+        <li>Event Creator   :   @{{ event.creator }}</li><br>
+        <li>Created at   :   {{ event.created_at }}</li><br>
+        <li>Start at   :   {{ event.start_at }}</li><br>
+        <li>End at   :   {{event.end_at }}</li><br>
+      </ul>
+      <div class="joinleave">
+        <h2> <a class="btn btn-info" href="{% url 'calendar_app:joinevent' pk=event.id %}">Join</a></h2>
+        <h2> <a class="btn btn-info" href="{% url 'calendar_app:updateevent' pk=event.id %}">Update</a></h2>
+        <h2> <a class="btn btn-info" href="{% url 'calendar_app:leaveevent' pk=event.id %}">Leave</a></h2>
+      </div>
+    </div>
+   <div class="jumbotron member">
+     <h2>Members</h2><br>
+      {% for member in members %}
+        <div class="kick_out">
+            <li> <a href="{% url 'calendar_app:memberprofile' pk=member.member.id %}">{{ member }}</a></li>
+            <h6><a class="btn btn-info" href="{% url 'calendar_app:kick_out' event_pk=event.id pk=member.member.id %}"> Kick_out </a></h6>
+        </div><br>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="jumbotron about">
+    <h2>About this event</h2>
+    {{ event.about }} <br><br>
+    <a class="btn btn-info" href="{% url 'calendar_app:deleteevent' pk=event.id %}">Delete</a>
+  </div>
+</div>
+{% endblock %}

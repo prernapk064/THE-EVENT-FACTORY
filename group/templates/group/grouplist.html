@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container display">
+   <div class="jumbotron today">
+    <h2>Group List</h2>
+    <ol>
+      {% for group in list %}
+        <li> {{ group }} </li>
+      {% endfor %}
+    </ol>
+   </div>
+</div>
+{% endblock %}

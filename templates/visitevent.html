@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+  <div class="dm">
+    <div class="jumbotron detail">
+      <ul>
+        <li>Event Name   :   {{ eve.title }}</li><br>
+        <li>Event Creator   :   @{{ eve.creator }}</li><br>
+        <li>Created at   :   {{ eve.created_at }}</li><br>
+        <li>Start at   :   {{ eve.start_at }}</li><br>
+        <li>End at   :   {{eve.end_at }}</li><br>
+      </ul>
+    </div>
+   <div class="jumbotron member">
+     <h2>Members</h2><br>
+      {% for member in members %}
+        <div class="kick_out">
+            <li> {{ member }}</li>
+        </div><br>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="jumbotron about">
+    <h2>About this event</h2>
+    {{ eve.about }} <br><br>
+  </div>
+</div>
+<div class="container psts">
+   <button type="button " class="btn btn-info">
+     Total Post for this event <span class="badge badge-light">{{ all_posts.count }}</span>
+   </button>
+   <ol>
+     {%  for post in all_posts %}
+     <li>
+       <div class="jumbotron pst">
+          <div class="post1">
+              {{ post.count }}
+              <h5> {{ post.post }} </h5><br>
+          </div>
+          <div class="post2">
+              <h3>Posted At</h3>
+              <h5> {{ post.post_at }} </h5>
+           </div>
+        </div>
+      </li>
+     {% endfor %}
+   </ol>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container-sm active_events">
+    <div class="jumbotron p">
+      <h2 id='h2'>Profile</h2>
+      <div class="profl">
+          <div class="img">
+            <img src="{{ member_pro.profile_pic.url }}" width="250">
+          </div>
+          <div class="prof">
+            <h5> User : {{ member_pro }} </h5><br>
+            <h5> Profession : {{ member_pro.profession }} </h5><br>
+            <h5> Email : {{ member_pro.email }} </h5><br>
+            <h5> contact : {{ member_pro.contact }} </h5>
+          </div>
+      </div>
+        {% if user.id == instant_user.id %}
+            <h2><a class="btn btn-info" href="{% url 'updateprofile' %}">Update</a></h2>
+        {% endif %}
+    </div>
+    <div class="jumbotron q">
+        <h2>Events</h2>
+        <ol>
+          {% for event in memberevents %}
+            <h4> <li> {{ event }} </li> </h4> : <h5> at {{ event.start_at}} on {{ event.start_at.date }} to {{ event.end_at}}  </h5>
+          {% endfor %}
+        </ol>
+    </div>
+</div>
+{% endblock %}

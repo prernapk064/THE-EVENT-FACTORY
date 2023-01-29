@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container-sm">
+      <div class="jumbotron p">
+        <h2 id='h2'>Profile</h2>
+        <div class="profl">
+          <div class="img">
+             <img src="{{ profile.profile_pic.url }}" width="250">
+          </div>
+          <div class="prof">
+             <h5> User : {{ profile }} </h5><br>
+             <h5> Profession : {{ profile.profession }} </h5><br>
+             <h5> Email : {{ user.email }} </h5><br>
+             <h5> contact : {{ profile.contact }} </h5>
+          </div>
+        </div>
+        <h2><a class="btn btn-info" href="{% url 'updateprofile' %}">Update</a></h2>
+      </div>
+</div>
+{% endblock %}

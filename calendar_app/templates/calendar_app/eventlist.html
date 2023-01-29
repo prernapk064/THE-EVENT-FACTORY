@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="action">
+    <a class="btn btn-info" href="{% url 'calendar_app:eventlist' %}?{{ previous }}"><i class="fas fa-fast-backward"></i> previous</a>
+    <a class="btn btn-info" href="{% url 'calendar_app:createevent' %}"><i class="fas fa-plus-circle"></i>  Create Event</a>
+    <a class="btn btn-info" href="{% url 'calendar_app:eventlist' %}?{{ next }}"> <i class="fas fa-fast-forward"></i> next </a>
+</div>
+<div class="container display">
+  <div class="jumbotron my_event">
+    <h7>My events on this month</h7>
+    <ol>
+    {% for ev in events %}
+         <a href="{% url 'calendar_app:eventinfo' pk=ev.id %}" ><li>{{ ev.title }}</li></a><br>
+    {% endfor %}
+    </ol>
+  </div>
+   <div class="jumbotron list">
+     <h4>Today : {{ today }} </h4>
+     {{ calendar }}
+   </div>
+   <div class="jumbotron todays_event">
+     <h7>Events on this month</h7>
+     <ol>
+     {% for ev in current_month_events %}
+          <a href="{% url 'calendar_app:eventinfo' pk=ev.id %}" ><li>{{ ev.title }}</li></a><br>
+     {% endfor %}
+     </ol>
+   </div>
+</div>
+{% endblock %}

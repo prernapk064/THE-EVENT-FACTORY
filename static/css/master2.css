@@ -1,0 +1,304 @@
+
+
+.nvbar{
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+}
+
+.all_ev, .all_gr{
+  margin-left: 20px;
+}
+
+
+.action{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.guide{
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.guide h7{
+  font-size: 18px;
+  color:red;
+}
+
+table,tr,td{
+  color: #939696;
+  width: 100%;
+  height: 100px;
+  table-layout: fixed;
+  border:1px solid black;
+}
+
+td{
+  text-align: left;
+  overflow:hidden;
+  border-radius: 15px;
+  background-color: #e1ebea;
+}
+
+.t{
+  width: 500px;
+}
+
+.t a{
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.month, .about{
+  text-align: center;
+}
+
+th{
+  background-color: #e4ebea;
+  border-radius: 15px;
+}
+
+.dm{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.detail{
+  width: 60%
+}
+
+.post{
+  color: #225459;
+}
+.member{
+  width: 40%;
+  margin-left: 10px;
+  overflow:scroll;
+}
+
+.member ul{
+  width: 100%;
+
+}
+
+.member li{
+  color: gray;
+}
+.member li a{
+  font-size: 17px;
+}
+
+
+.create ,.detail, .member{
+  margin-top: 40px;
+  border-radius: 20px;
+
+}
+
+.create, .update h1,form, .member h2, .psts{
+  text-align: center;
+}
+
+.joinleave{
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail ul{
+  width: 100%;
+  height: 300px;
+  font-family: 'Dancing Script', cursive;
+  overflow: hidden;
+}
+
+
+
+.detail li{
+  width: 100%;
+  background-color:#dae8e6;
+  padding-left: 5px;
+  font-size: 20px;
+}
+.list , .detail, .about, .member, .today{
+  border-radius: 20px;
+}
+
+.display{
+  display: flex;
+}
+
+.todays_event{
+  margin-left: 10px;
+  border-radius: 20px;
+}
+.my_event{
+  margin-right: 10px;
+  border-radius: 20px;
+}
+.todays_event h7, .my_event h7{
+  padding-top: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.todays_event ol, .my_event ol{
+  padding-right:30px;
+  padding-top: 30px;
+}
+.todays_event li, .my_event li{
+  color:#294047;
+  background-color:#ede6e6;
+}
+
+.user{
+  margin-right: 20px;
+}
+
+.home {
+  font-size: 30px;
+  color:#757d7c;
+}
+
+.home:hover{
+  color: green;
+}
+
+.kick_out{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.kick_out a{
+  font-size: 15px;
+}
+
+.p, .q{
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: 'Dancing Script', cursive;
+  height: 60%;
+}
+
+.p #h2{
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.p h2{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.q h2{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.profl{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.img{
+  text-align: left;
+  width: 40%;
+}
+
+.img img{
+  border-radius:20px;
+}
+
+
+.prof{
+  padding-right: 10%;
+  width: 60%;
+}
+.prof h5{
+  background-color:#dae8e6;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+.q h5{
+  background-color: #dae8e6;
+  border-radius: 20px;
+  text-align: center;
+
+}
+
+.added{
+  text-align: center;
+  color:#182422;
+}
+
+
+.bn{
+margin-right: 20px;
+}
+
+.pst{
+  color : #b0b1b8
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content:space-around;
+  text-align: center;
+  width: 100%;
+}
+
+.psts button{
+  margin-bottom: 25px;
+}
+
+
+.post1{
+  width: 70%;
+  border-right: 1px solid gray;
+  overflow: auto;
+}
+.post1 h5{
+  padding-right: 20px;
+}
+
+.post2{
+  width: 30%;
+}
+
+.crtev h3,h4{
+  text-align: center;
+}
+
+.pp2{
+  padding-top: 100%;
+}
+.pp2 a{
+  margin-left: 15px;
+}
+
+.reset{
+  margin-top: 40px;
+  text-align: center;
+}
+.reset1{
+  margin-top:40px;
+  font-family: 'Dancing Script', cursive;
+  text-align:left;
+}
+
+.group{
+  display: flex;
+}
+.group g1{
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+.group g1{
+  justify-content: flex-end;
+}

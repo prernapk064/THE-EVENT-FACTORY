@@ -1,0 +1,122 @@
+.nvbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.all_ev,
+.all_gr {
+    margin-left: 20px;
+}
+
+.j1 h3 {
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.home {
+    font-size: 30px;
+    color: #757d7c;
+}
+
+.home:hover {
+    color: green;
+}
+
+.facebook,
+.twitter,
+.github,
+.envelop,
+.linkedin {
+    font-size: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.facebook:hover,
+.twitter:hover,
+.envelop:hover,
+.linkedin:hover {
+    font-size: 80px;
+    margin-right: 30px;
+}
+
+.j3 {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login {
+    margin-right: 20px;
+}
+
+.j1 img {
+    object-fit: fill;
+}
+
+.j1 h3 {
+    padding-top: 30px;
+}
+
+.c1 {
+    display: flex;
+    justify-content: center;
+}
+
+.c1 .j2 {
+    margin-left: 10px;
+    text-align: right;
+}
+
+.j2 p {
+    opacity: 0.8;
+}
+
+.j2 u {
+    text-decoration: none;
+    color: #545153;
+}
+
+.c2 {
+    height: 20%;
+}
+
+.c2 .j3 {
+    width: 100%;
+}
+
+.c2,
+.j4,
+.cont,
+.reset,
+.login {
+    text-align: center;
+}
+
+.reset {
+    margin-top: 40px;
+    opacity: 0.8;
+}
+
+.user {
+    margin-right: 20px;
+}
+
+.bn {
+    margin-right: 20px;
+}
+
+.post {
+    color: #225459;
+}
+
+.j1 .guider {
+    text-align: center;
+    margin-bottom: 30px;
+}

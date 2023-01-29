@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Login</h1>
+    <form method="post">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <div class="login">
+        <input class="btn btn-info" type="submit" value="login"><br><br>
+        <a class="btn btn-info" href="{% url 'password_reset' %}">Forgotten password?</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron update">
+      <h1> Update your Group</h1>
+      <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <input class="btn btn-info update" type="submit" value="Update">
+      </form>
+   </div>
+</div>
+{% endblock %}
